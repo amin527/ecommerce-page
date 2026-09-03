@@ -9,7 +9,7 @@ function BasketItemCard(props) {
     return (
         <div className="item-card">
             <div className="image-container">
-                <img className="img" src={imgSource}></img>
+                <img className="img" src={imgSource} alt=""/>
             </div>
             <div className="item-card-content">
                 <div id="name">{name}</div>

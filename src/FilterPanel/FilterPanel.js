@@ -15,11 +15,11 @@ function FilterPanel(props) {
 
     useEffect(() => {
         props.setFilteredProducts(props.retrievedProducts.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase())))
-    }, [searchTerm])
+    }, [searchTerm, props])
 
     useEffect(() => {
         props.setFilteredProducts(props.retrievedProducts.filter(item => item.price >= sliderValues[0] && item.price <= sliderValues[1]))
-    }, [sliderValues])
+    }, [sliderValues, props])
 
     useEffect(() => {
         props.setFilteredProducts(
@@ -28,7 +28,7 @@ function FilterPanel(props) {
                 selectedTags.every(tag => item.tags?.includes(tag))
             )
         );
-    }, [selectedTags]);
+    }, [selectedTags, props]);
 
 
     function selectHandler(item) {

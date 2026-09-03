@@ -1,6 +1,6 @@
 
 import "./BasketPanel.css"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import BasketPanelCard from "./BasketPanelCard"
 
 function BasketPanel(props) {
@@ -8,13 +8,13 @@ function BasketPanel(props) {
     let [subTotal, setSubTotal] = useState(0)
     const unieueItemsInBasket = props.retrievedProducts.filter(item => props.Basket.includes(item.id));
 
-    function itemsInBasket() {
+    const itemsInBasket = useCallback(() => {
         let basket = []
         for (const itemID of props.Basket) {
-            basket.push(props.retrievedProducts.find(item => item.id == itemID))
+            basket.push(props.retrievedProducts.find(item => item.id === itemID))
         }
         return basket
-    }
+    }, [props])
 
     useEffect(() => {
         const basket = itemsInBasket()
@@ -24,7 +24,7 @@ function BasketPanel(props) {
             total = total + item.price
         }
         setSubTotal(total)
-    }, [props.Basket])
+    }, [props.Basket, itemsInBasket])
 
     return (
         <div className="basket-panel">

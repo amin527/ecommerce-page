@@ -8,7 +8,7 @@ function BasketPage(props) {
     console.log(props.retrievedProducts);
     console.log(props.Basket);
     console.log(props.retrievedProducts.filter(item => props.Basket.includes(item.id)));
-  }, []);
+  }, [props]);
 
   const itemsInBasket = props.retrievedProducts.filter(item => props.Basket.includes(item.id));
 
