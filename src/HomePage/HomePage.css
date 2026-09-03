@@ -1,0 +1,43 @@
+.home-page {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;     
+}
+
+.home-page .bottom-half{
+  display: flex;
+  flex-direction: row;
+}
+
+.standard-body{
+    flex-grow: 1;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.home-page-content{
+  background-color: var(--background-color);
+  text-align: center;
+  width: 84%;
+  min-height: 100vh;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+  display: grid;
+  gap: 20px;
+}
+
+.column{
+  display: inline-block;
+  /* width: 21%; */
+  margin-top: 45px;
+  vertical-align: top;
+  margin-left: 2%;
+}
+
+.column:first-child{
+  margin-left: 0%;
+}

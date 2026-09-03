@@ -1,0 +1,47 @@
+.nav-bar {
+    background-color: #131313;
+    color: white;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.basket-button{
+    position: absolute;
+    right:3.2%;
+    padding: 10px 40px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.home-button{
+    position: absolute;
+    left: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 40px;
+}
+
+.home-button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.basket-button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.main-title{
+    font-size:3em;
+    font-weight: bolder;
+}
+.separator-bar{
+    /* background-color: #a8a8a8; */
+    background-color: var(--bright-accent-color);
+    height: 30px;
+}

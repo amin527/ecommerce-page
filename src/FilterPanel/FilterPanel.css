@@ -1,0 +1,84 @@
+.filter-panel {
+    width: 16%; 
+    background-color:rgb(186, 180, 201); 
+
+    height: auto;     
+}
+.filter-panel .title{
+    margin-bottom: 5px;
+    font-size: large;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(24, 24, 24);
+}
+.filter-panel .filter-container{
+    margin-top: 20px;
+    padding: 0 10% 20px 5%;
+    border: 0;
+    border-bottom: 1px solid #797979;
+    text-align: left;
+}
+
+.range-slider__range{
+    background-color: var(--bright-accent-color) !important;
+}
+.range-slider__thumb{
+    background-color: #7c36ff !important;
+
+}
+
+.input-field{
+    border: 0px;
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.chevron{
+    transform: translateY(5px);
+    margin-left: 5px;
+}
+.price-filter-container{
+    padding: 10px 10% 20px 5%;
+    padding: 13px 0;
+    text-align: center;
+}
+.slider-container{
+    margin-top: 20px;
+}
+.price-range{
+    margin-bottom: 10px;
+}
+
+/* inactive tag CSS */
+.tag-filter-container .tag-inactive{
+    display: inline-block;
+    background-color: #b494ee;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-right: 7px;
+    padding: 2px 10px;
+    cursor: pointer;
+    /* border: gray solid 1px; */
+}
+.tag-filter-container .tag-inactive:hover{
+    background-color: black;
+    color:white;
+}
+
+/* active tag css */
+.tag-filter-container .tag-active{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-right: 7px;
+    padding: 2px 10px;
+    cursor: pointer;
+    border:1px solid black;
+}
+
+.tag-filter {
+    margin-top: 10px;
+}
